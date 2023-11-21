@@ -30,11 +30,21 @@ their application programming interfaces (APIs).
 
 ### Use Cases
 
-### Terraform Editions
+- Terraform lets you use the same workflow to manage multiple providers and handle cross-cloud dependencies.
+- You can use Terraform to efficiently deploy, release, scale, and monitor infrastructure for multi-tier applications.
+- Terraform can help you enforce policies on the types of resources teams can provision and use.
+- Terraform can interact with Software Defined Networks (SDNs) to automatically configure the network according to the needs of the applications running in it.
+- Terraform lets you both deploy a Kubernetes cluster and manage its resources (e.g., pods, deployments, services, etc.).
 
 ### The Core Terraform Workflow
 
-### Terraform vs. Alternatives
+- The core Terraform workflow has three steps:
+    - **Write** - Author infrastructure as code.
+        - `terraform init`.
+    - **Plan** - Preview changes before applying.
+        - `terraform plan`.
+    - **Apply** - Provision reproducible infrastructure.
+        - `terraform apply`.
 
 ## Terraform Language Documentation
 
