@@ -172,3 +172,18 @@ The syntax of the Terraform language consists of only a few basic elements:
 
 ### Tests
 
+- Tests run against test-specific, short-lived resources, preventing any risk to your existing
+ infrastructure or state.
+- By default, tests within Terraform create real infrastructure and can run assertions and
+ validations against that infrastructure.
+    - You can override the normal testing behavior by updating the command attribute to `plan`.
+- Terraform discovers test files are based on their file extension `.tftest.hcl`.
+- Each test file contains the following root level attributes and blocks:
+    - One to many `run` blocks.
+    - Zero to one `variables` block.
+    - Zero to many `provider` blocks.
+- Terraform executes run blocks in order.
+- The order of the variables and provider blocks doesn't matter.
+- The most important fields and blocks in the `run` block are `command` and `assert`.
+- You can provide values for Input Variables within your configuration directly from your test files.
+- Terraform supports the `expect_failures` attribute for testing failure cases.
