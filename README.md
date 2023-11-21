@@ -7,4 +7,8 @@ change, and version infrastructure safely and efficiently.
 
 ## [Terraform Language Documentation](language.md)
 
+## [Terraform CLI Documentation](cli.md)
+
+## [CDK for Terraform](cdk.md)
+
 ## [Tutorials](tutorials.md)

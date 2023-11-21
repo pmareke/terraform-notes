@@ -114,3 +114,38 @@ The syntax of the Terraform language consists of only a few basic elements:
 - The Terraform Registry is the main directory of publicly available Terraform providers.
 
 ### Variables and Outputs
+
+- **Input** Variables serve as parameters for a Terraform module.
+    - Each input variable accepted by a module must be declared using a `variable` block.
+    - Terraform CLI defines the following optional arguments for variable declarations:
+        - default - A default value which then makes the variable optional.
+        - type - This argument specifies what value types are accepted for the variable.
+        - description - This specifies the input variable's documentation.
+        - validation - A block to define validation rules, usually in addition to type constraints.
+        - sensitive - Limits Terraform UI output when the variable is used in configuration.
+        - nullable - Specify if the variable can be null within the module.
+- **Output** Values are like return values for a Terraform module.
+    - Output values make information about your infrastructure available on the command line,
+     and can expose information for other Terraform configurations to use
+    - Each output value exported by a module must be declared using an `output` block.
+    - `output` blocks can optionally include `description`, `sensitive`, and `depends_on` arguments.
+- **Local** Values are a convenience feature for assigning a short name to an expression.
+    - A local value assigns a name to an expression, so you can use the name multiple times within a
+     module instead of repeating the expression.
+    - A set of related local values can be declared together in a single `locals` block.
+    - Once a local value is declared, you can reference it in expressions as `local.<NAME>`.
+
+### Modules
+
+- A module is a container for multiple resources that are used together.
+- Every Terraform configuration has at least one module, known as its root module,
+ which consists of the resources defined in the .tf files in the main working directory.
+- Modules can be called multiple times.
+- To call a module means to include the contents of that module into the configuration with
+ specific values for its input variables.
+- Modules are called from within other modules using `module` blocks.
+- All modules require a source argument.
+    - Its value is either the path to a local directory containing the module's configuration files,
+     or a remote module source that Terraform should download and use.
+
+### Checks
