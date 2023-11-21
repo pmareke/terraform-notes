@@ -39,3 +39,34 @@ The syntax of the Terraform language consists of only a few basic elements:
 - Use override files only in special circumstances.
 
 ## Syntax
+
+### Arguments
+
+- An argument assigns a value to a particular name.
+- The identifier before the equals sign is the argument name, and the expression after
+ the equals sign is the argument's value.
+- The context where the argument appears determines what value types are valid.
+
+### Blocks
+
+- A block is a container for other content.
+- A block has a type.
+- Each block type defines how many labels must follow the type keyword.
+- A particular block type may have any number of required labels, or it may require none.
+- After the block type keyword and any labels, the block body is delimited by the { and } characters.
+
+### Identifiers
+
+- Argument names, block type names, and the names of most Terraform-specific constructs like resources,
+ input variables, etc. are all identifiers. 
+
+### Comments
+
+- The `#` single-line comment style is the default comment style and should be used in most cases.
+
+
+### Style Conventions
+
+- To enforce these conventions automatically run `terraform fmt`.
+
+## Resources
