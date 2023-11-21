@@ -1,15 +1,13 @@
-# [Docs](https://developer.hashicorp.com/terraform/docs)
+# [Introduction](https://developer.hashicorp.com/terraform/intro)
 
-## Introduction
-
-### What is Terraform?
+## What is Terraform?
 
 - Terraform is an infrastructure as code tool that lets you build,
  change, and version cloud and on-prem resources safely and efficiently.
 - Terraform can manage low-level components like compute, storage,
  and networking resources, as well as high-level components like DNS entries and SaaS features.
 
-#### How does Terraform work?
+### How does Terraform work?
 
 - Terraform creates and manages resources on cloud platforms and other services through 
 their application programming interfaces (APIs).
@@ -28,7 +26,7 @@ their application programming interfaces (APIs).
 - Terraform configuration files are declarative, meaning that they describe the end state of your infrastructure.
 - Terraform supports reusable configuration components called modules.
 
-### Use Cases
+## Use Cases
 
 - Terraform lets you use the same workflow to manage multiple providers and handle cross-cloud dependencies.
 - You can use Terraform to efficiently deploy, release, scale, and monitor infrastructure for multi-tier applications.
@@ -36,7 +34,7 @@ their application programming interfaces (APIs).
 - Terraform can interact with Software Defined Networks (SDNs) to automatically configure the network according to the needs of the applications running in it.
 - Terraform lets you both deploy a Kubernetes cluster and manage its resources (e.g., pods, deployments, services, etc.).
 
-### The Core Terraform Workflow
+## The Core Terraform Workflow
 
 - The core Terraform workflow has three steps:
     - **Write** - Author infrastructure as code.
@@ -45,7 +43,3 @@ their application programming interfaces (APIs).
         - `terraform plan`.
     - **Apply** - Provision reproducible infrastructure.
         - `terraform apply`.
-
-## Terraform Language Documentation
-
-## Plugin Development
