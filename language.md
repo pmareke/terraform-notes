@@ -70,3 +70,47 @@ The syntax of the Terraform language consists of only a few basic elements:
 - To enforce these conventions automatically run `terraform fmt`.
 
 ## Resources
+
+- Resources are the most important element in the Terraform language.
+- Each resource block describes one or more infrastructure objects.
+- A resource block declares a resource of a specific type with a specific local name.
+
+### Resource Types
+
+- Each resource is associated with a single resource type.
+- A provider is a plugin for Terraform that offers a collection of resource types.
+- Each resource type is implemented by a provider.
+- Based on a resource type's name, Terraform can usually determine which provider to use.
+- Most of the arguments within the body of a resource block are specific to the selected resource type.
+- Every Terraform provider has its own documentation, describing its resource types and their arguments.
+- You can use `precondition` and `postcondition` blocks to specify assumptions and guarantees about
+ how the resource operates.
+- Some resource types provide a special timeouts.
+
+### Meta Arguments
+
+- Use the `depends_on` meta-argument to handle hidden resource or module dependencies that Terraform
+ cannot automatically infer.
+- If a resource or module block includes a `count` argument whose value is a whole number,
+ Terraform will create that many instances.
+- If a resource or module block includes a `for_each` argument whose value is a map or a set of strings,
+ Terraform creates one instance for each member of that map or set.
+- The `provider` meta-argument specifies which provider configuration to use for a resource.
+
+### Data Sources
+
+- Data sources allow Terraform to use information defined outside of Terraform.
+- A data source is accessed via a special kind of resource known as a data resource,
+ declared using a `data` block.
+- The data source and name together serve as an identifier for a given resource and so
+ must be unique within a module.
+
+### Providers
+
+- Terraform configurations must declare which providers they require so that Terraform
+ can install and use them.
+- Each provider adds a set of resource types and/or data sources that Terraform can manage.
+- Every resource type is implemented by a provider.
+- The Terraform Registry is the main directory of publicly available Terraform providers.
+
+### Variables and Outputs
