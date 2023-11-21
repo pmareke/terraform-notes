@@ -124,6 +124,7 @@ The syntax of the Terraform language consists of only a few basic elements:
         - validation - A block to define validation rules, usually in addition to type constraints.
         - sensitive - Limits Terraform UI output when the variable is used in configuration.
         - nullable - Specify if the variable can be null within the module.
+    - Once a input variable is declared, you can reference it in expressions as `var.<NAME>`.
 - **Output** Values are like return values for a Terraform module.
     - Output values make information about your infrastructure available on the command line,
      and can expose information for other Terraform configurations to use
@@ -149,3 +150,25 @@ The syntax of the Terraform language consists of only a few basic elements:
      or a remote module source that Terraform should download and use.
 
 ### Checks
+
+- The `check` block can validate your infrastructure outside the usual resource lifecycle.
+- Check blocks execute as the last step of a plan or apply after Terraform has planned or
+ provisioned your infrastructure.
+- Check blocks validate your custom assertions using `assert` blocks.
+
+### Expresions
+
+- Expressions refer to or compute values within a configuration.
+- The result of an expression is a value.
+    - All values have a type.
+- The valid types in Terraform are `string`, `number`, `bool`, `list`, `set`,`map` and `null`.
+
+### State
+
+- This state is stored by default in a local file named `terraform.tfstate`.
+- Terraform uses state to determine which changes to make to your infrastructure.
+- Terraform provides the terraform state command to perform basic modifications of the state using the CLI.
+- State snapshots are stored in JSON format.
+
+### Tests
+
