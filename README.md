@@ -3,12 +3,12 @@
 Terraform is an infrastructure as code tool that lets you build,
 change, and version infrastructure safely and efficiently.
 
-## [Intro](intro.md)
+## [Intro](docs/intro.md)
 
-## [Terraform Language Documentation](language.md)
+## [Terraform Language Documentation](docs/language.md)
 
-## [Terraform CLI Documentation](cli.md)
+## [Terraform CLI Documentation](docs/cli.md)
 
-## [CDK for Terraform](cdk.md)
+## [CDK for Terraform](docs/cdk.md)
 
-## [Tutorials](tutorials.md)
+## [Tutorials](docs/tutorials.md)
