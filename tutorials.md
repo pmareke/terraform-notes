@@ -18,5 +18,3 @@
 
 ## Use Cases - Kubernetes
 
-## Use Cases - 
-
