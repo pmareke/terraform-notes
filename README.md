@@ -11,4 +11,4 @@ change, and version infrastructure safely and efficiently.
 
 ## [CDK for Terraform](docs/cdk.md)
 
-## [Tutorials](docs/tutorials.md)
+## [Tutorials](tutorials/)
